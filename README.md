@@ -1,28 +1,65 @@
-# To Thanh Liem — Quantitative Finance Portfolio
+<div align="center">
 
-A bilingual (English/Vietnamese), responsive static website for GitHub Pages.
+# To Thanh Liem
 
-## Publish with GitHub Pages
+**Quantitative Finance · Investment Research · Financial Risk**
 
-1. On GitHub, create a **public** repository named exactly `toliem212.github.io`.
-2. Upload `index.html` and `.nojekyll` to the repository's root folder on the `main` branch (or let ChatGPT add these files using the linked GitHub connection after the repository exists).
-3. Open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, then **main** and **/(root)**. Save.
-4. Visit `https://toliem212.github.io/` after GitHub finishes publishing.
+*A research-led portfolio of financial analytics, systematic investment studies and practical risk-monitoring tools.*
 
-No build tools, external scripts, API keys, or paid hosting are required.
+**[Explore the portfolio →](https://toliem212.github.io/)** &nbsp;·&nbsp; [GitHub profile](https://github.com/toliem212)
 
-## Structure
+<sub>English / Tiếng Việt &nbsp;·&nbsp; Responsive website &nbsp;·&nbsp; GitHub Pages</sub>
 
-- `index.html` — complete website, styles, and bilingual toggle
-- `.nojekyll` — tells GitHub Pages not to run Jekyll processing
+</div>
 
-## Content policy
+---
 
-- Public project links point to existing user-controlled projects.
-- VN30 ETF research is described without sharing private data, proprietary research parameters, or code.
-- Illustrative chart is explicitly marked as illustrative, not real financial performance.
-- No private email address, phone number, or personal documents are disclosed.
+## Overview
 
-## Changes
+This repository hosts my personal research portfolio. It brings together selected work at the intersection of **financial markets, quantitative methods, data analysis and software development**, with an emphasis on clear methodology and practical applications.
 
-Edit text within `index.html` and commit to the default branch. GitHub Pages will republish automatically after successful deployment.
+The website presents project objectives, research approaches and links to available live tools or supporting materials. It is a **portfolio**, not a trading service, investment recommendation or claim of live strategy performance.
+
+## Selected work
+
+| Project | Research focus | Explore |
+| :--- | :--- | :--- |
+| **Financial Risk Surveillance** | Monitoring and analytical workflows covering market, liquidity and financial risk. | [Live application](https://financial-risk-surveillance-1023871252742.asia-southeast1.run.app/) · [Project overview](https://github.com/toliem212/financial-risk-surveillance-portfolio) |
+| **Market Risk Dashboard** | Market-risk analytics, sensitivity measures, stress scenarios and visual reporting. | [Live dashboard](https://to-thanh-liem-market-risk.streamlit.app/) · [Repository](https://github.com/toliem212/market-risk-dashboard) |
+| **VN30 ETF Quantitative Research** | Systematic ETF investment research, portfolio considerations and empirical evaluation. | [Research portfolio](https://github.com/toliem212/vn30-etf-quant-research-portfolio) |
+| **SMA Cross — VN30** | Rule-based equity strategy research, testing assumptions and risk-aware interpretation. | [Research repository](https://github.com/toliem212/sma-cross-vn30) |
+
+*Research projects and demonstrations are presented with their respective assumptions and limitations. Any illustrative results should not be interpreted as verified live trading outcomes.*
+
+## Research approach
+
+```mermaid
+flowchart LR
+    A["Research question"] --> B["Data & validation"]
+    B --> C["Methods & models"]
+    C --> D["Testing & robustness"]
+    D --> E["Risk & constraints"]
+    E --> F["Practical delivery"]
+```
+
+My focus is on connecting a well-defined financial question with transparent data processing, appropriate quantitative methods, careful evaluation and outputs that can be used or reviewed.
+
+## Website
+
+- **Format:** Lightweight static site built with HTML, CSS and JavaScript.
+- **Languages:** English and Vietnamese.
+- **Experience:** Responsive layout for desktop and mobile, accessible navigation and project links.
+- **Hosting:** GitHub Pages, published from the `main` branch.
+- **Entry point:** [`index.html`](./index.html).
+
+The source in this repository is for the public-facing portfolio website. Individual research projects may have their own documentation, scope and code-sharing arrangements.
+
+---
+
+<div align="center">
+
+**[Visit the portfolio](https://toliem212.github.io/)**
+
+<sub>© To Thanh Liem · Quantitative Finance & Research</sub>
+
+</div>
