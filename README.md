@@ -52,7 +52,7 @@ My focus is on connecting a well-defined financial question with transparent dat
 - **Hosting:** GitHub Pages, published from the `main` branch.
 - **Entry point:** [`index.html`](./index.html).
 
-The source in this repository is for the public-facing portfolio website. Individual research projects may have their own documentation, scope and code-sharing arrangements.
+The source in this repository is for the personal portfolio website. Individual research projects may have their own documentation, scope and code-sharing arrangements.
 
 ---
 
