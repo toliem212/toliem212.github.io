@@ -302,6 +302,7 @@
       let isOpen = false;
       let toastTimer;
       let audioCtx = null, melodyTimer = null, noteIndex = 0, soundOn = false;
+      let userMuted = false, startingSound = false;
       const params = new URLSearchParams(window.location.search);
       const values = {
         to: (params.get('to') || DEFAULT.to).slice(0, 45),
@@ -352,13 +353,14 @@
           node.addEventListener('animationend', () => node.remove(), { once: true });
         }
       }
-      function openCard() {
+      function openCard(fromUserGesture = false) {
         if (isOpen) return;
         isOpen = true;
         stage.classList.add('is-open');
         $('#envelopeBtn').tabIndex = -1;
         mainBtn.innerHTML = 'Đóng thiệp <span aria-hidden="true">↶</span>';
         $('#hintText').textContent = '✧ Chúc bạn một ngày 20/10 thật đẹp và ý nghĩa.';
+        if (fromUserGesture && !userMuted && !soundOn) void startSound();
         setTimeout(() => { burst(); if (soundOn) chime(); }, reducedMotion ? 0 : 450);
       }
       function closeCard() {
@@ -431,26 +433,52 @@
         if (!audioCtx || !soundOn) return;
         const tune = [523.25,659.25,783.99,659.25,587.33,523.25,440,0,493.88,587.33,659.25,783.99,659.25,587.33,523.25,0];
         const freq = tune[noteIndex % tune.length];
-        if (freq) playNote(freq, audioCtx.currentTime, .42, .013);
+        if (freq) playNote(freq, audioCtx.currentTime, .42, .035);
         noteIndex++;
       }
-      async function toggleSound() {
-        try {
-          if (!soundOn) {
-            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            await audioCtx.resume();
-            soundOn = true; tickMelody(); melodyTimer = setInterval(tickMelody, 530);
-          } else {
-            soundOn = false; clearInterval(melodyTimer); melodyTimer = null;
-          }
-          $('#soundBtn').setAttribute('aria-pressed', String(soundOn));
-          $('#soundBtn').setAttribute('aria-label', soundOn ? 'Tắt nhạc nền' : 'Bật nhạc nền');
-          $('#soundIcon').textContent = soundOn ? '♪' : '♫';
-          $('#soundLabel').textContent = soundOn ? 'Tắt giai điệu' : 'Bật giai điệu';
-        } catch (e) { toast('Trình duyệt không hỗ trợ phát giai điệu.'); }
+      function updateSoundControls() {
+        $('#soundBtn').setAttribute('aria-pressed', String(soundOn));
+        $('#soundBtn').setAttribute('aria-label', soundOn ? 'Tắt nhạc nền' : 'Bật nhạc nền');
+        $('#soundIcon').textContent = soundOn ? '♪' : '♫';
+        $('#soundLabel').textContent = soundOn ? 'Tắt giai điệu' : 'Bật giai điệu';
       }
-      $('#mainBtn').addEventListener('click', () => isOpen ? closeCard() : openCard());
-      $('#envelopeBtn').addEventListener('click', openCard);
+      async function startSound() {
+        if (soundOn || startingSound) return;
+        startingSound = true;
+        try {
+          const AudioCtor = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtor) throw new Error('Web Audio không được hỗ trợ');
+          if (!audioCtx) audioCtx = new AudioCtor();
+          await audioCtx.resume();
+          if (audioCtx.state !== 'running') throw new Error('Không thể kích hoạt âm thanh');
+          soundOn = true;
+          noteIndex = 0;
+          tickMelody();
+          clearInterval(melodyTimer);
+          melodyTimer = setInterval(tickMelody, 530);
+          updateSoundControls();
+        } catch (error) {
+          soundOn = false;
+          updateSoundControls();
+          toast('Không thể phát nhạc. Hãy chạm nút ♫ để thử lại.');
+        } finally {
+          startingSound = false;
+        }
+      }
+      function toggleSound() {
+        if (soundOn) {
+          userMuted = true;
+          soundOn = false;
+          clearInterval(melodyTimer);
+          melodyTimer = null;
+          updateSoundControls();
+        } else {
+          userMuted = false;
+          void startSound();
+        }
+      }
+      $('#mainBtn').addEventListener('click', () => isOpen ? closeCard() : openCard(true));
+      $('#envelopeBtn').addEventListener('click', () => openCard(true));
       $('#replayBtn').addEventListener('click', closeCard);
       $('#shareBtn').addEventListener('click', shareCard);
       $('#copyBtn').addEventListener('click', copyGreeting);
