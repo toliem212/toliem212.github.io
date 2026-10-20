@@ -14,6 +14,9 @@
   <meta property="og:description" content="Một lời chúc nhỏ, cùng thật nhiều yêu thương. Mở phong bì để nhận món quà ngày Phụ nữ Việt Nam 20/10." />
   <meta property="og:url" content="https://toliem212.github.io/thiep-20-10/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --cream: #fbf5ee;
@@ -97,8 +100,8 @@
     }
     .stage::before { content: ""; position: absolute; width: 430px; height: 430px; border: 1px solid rgba(191,141,124,.27); border-radius: 50%; top: 79px; left: 50%; transform: translateX(-50%); }
     .stage::after { content: ""; position: absolute; width: 485px; height: 485px; border: 1px solid rgba(191,141,124,.11); border-radius: 50%; top: 51px; left: 50%; transform: translateX(-50%); }
-    .stage-caption { position: absolute; top: 32px; left: 50%; transform: translateX(-50%); z-index: 7; white-space: nowrap; font: 11px/1.3 Georgia, serif; color: #a8807b; letter-spacing: .18em; text-transform: uppercase; }
-    .stage-bottom { position: absolute; bottom: 26px; left: 0; right: 0; z-index: 7; text-align: center; font-size: 11px; letter-spacing: .15em; color: #a98278; text-transform: uppercase; }
+    .stage-caption { position: absolute; top: 32px; left: 50%; transform: translateX(-50%); z-index: 7; white-space: nowrap; font: 11px/1.3 "Noto Serif", "Segoe UI", sans-serif; color: #a8807b; letter-spacing: .06em; text-transform: uppercase; }
+    .stage-bottom { position: absolute; bottom: 26px; left: 0; right: 0; z-index: 7; text-align: center; font-size: 11px; letter-spacing: .05em; color: #a98278; text-transform: uppercase; }
     .stage-bottom::before, .stage-bottom::after { content: "✦"; padding: 0 16px; color: var(--gold); }
     .botanical { pointer-events: none; position: absolute; z-index: 1; width: 305px; height: 380px; top: 57px; right: -62px; opacity: .84; transform: rotate(9deg); animation: sway 7s ease-in-out infinite; transform-origin: 80% 96%; }
     .botanical-left { width: 205px; height: 245px; top: 295px; left: -52px; right: auto; transform: rotate(-23deg); animation: swayLeft 8s ease-in-out infinite; opacity: .55; }
@@ -128,21 +131,28 @@
     .stage.is-open .envelope-wrap { opacity: 0; visibility: hidden; transform: translateY(70px) scale(.8); transition: opacity .32s .27s, transform .7s var(--ease), visibility 0s .7s; }
     .stage.is-open .env-flap { transform: rotateX(180deg); }
     .stage.is-open .peek-letter { transform: translateY(-135px); }
-    .stage.is-open .open-card { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, -47%) scale(1) rotate(0); transition: opacity .65s .45s, transform 1s .3s var(--ease), visibility 0s .3s; }
+    .stage.is-open .envelope-wrap { position: absolute; }
+    .stage.is-open .open-card {
+      position: relative; left: auto; top: auto; transform: none;
+      width: min(425px, calc(100% - 32px)); min-height: 0;
+      margin: 87px auto 69px; padding: 34px 30px 26px;
+      opacity: 1; visibility: visible; pointer-events: auto;
+      transition: opacity .55s .18s, visibility 0s .18s;
+    }
     .card-ornament { display: flex; align-items: center; gap: 11px; color: #bd8d78; font-size: 17px; margin: 7px 0 12px; }
     .card-ornament::before, .card-ornament::after { content: ""; height: 1px; width: 37px; background: #e1c8b9; }
     .card-date { font: 400 54px/.99 Georgia, "Times New Roman", serif; color: #9d6470; letter-spacing: -.045em; }
     .card-date span { color: #d6af9e; padding: 0 5px; font-size: 35px; }
-    .card-sub { margin-top: 5px; color: #b08a7b; text-transform: uppercase; letter-spacing: .23em; font-size: 9px; }
+    .card-sub { margin-top: 5px; color: #b08a7b; text-transform: uppercase; letter-spacing: .09em; font-size: 9px; }
     .card-divider { width: 70px; height: 1px; background: #ddc7b7; margin: 22px 0 19px; }
-    .card-to { margin: 0 0 9px; color: #ab7e79; font-size: 12px; letter-spacing: .04em; }
+    .card-to { margin: 0 0 9px; color: #ab7e79; font: 12px/1.6 "Noto Serif", "Segoe UI", sans-serif; letter-spacing: normal; }
     .card-to strong { font-weight: 600; color: #844e5b; overflow-wrap: anywhere; }
-    .card-heading { margin: 0; font: 400 27px/1.19 Georgia, serif; color: var(--wine); }
-    .card-message { margin: 16px 0 18px; font: 14px/1.78 Georgia, "Times New Roman",serif; color: #785f5f; white-space: pre-line; overflow-wrap: anywhere; overflow-y: auto; max-height: 139px; scrollbar-color: #e0b7b0 transparent; }
-    .card-signature { margin-top: auto; font: italic 16px/1.55 Georgia, serif; color: #a16974; overflow-wrap: anywhere; max-width: 100%; white-space: pre-line; }
-    .card-flower { margin-top: 10px; font-size: 18px; color: #be8991; }
-    .card-controls { position: absolute; z-index: 7; bottom: 61px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity .3s; }
-    .stage.is-open .card-controls { opacity: 1; visibility: visible; transition: opacity .5s .8s; }
+    .card-heading { margin: 0; font: 400 26px/1.32 "Noto Serif", Georgia, serif; color: var(--wine); letter-spacing: normal; }
+    .card-message { margin: 18px 0 20px; font: 14px/1.9 "Noto Serif", "Segoe UI", sans-serif; color: #785f5f; white-space: pre-line; overflow-wrap: break-word; overflow: visible; max-height: none; letter-spacing: normal; }
+    .card-signature { margin-top: 10px; font: italic 15px/1.65 "Noto Serif", "Segoe UI", sans-serif; color: #a16974; overflow-wrap: break-word; max-width: 100%; white-space: pre-line; letter-spacing: normal; }
+    .card-flower { margin-top: 12px; font-size: 18px; color: #be8991; }
+    .card-controls { position: static; z-index: 7; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 18px; max-width: 100%; opacity: 1; visibility: visible; }
+    .stage.is-open .card-controls { opacity: 1; visibility: visible; }
     .mini-button { border: 1px solid rgba(151,92,94,.23); background: rgba(255,251,248,.88); color: #81545b; font-size: 11px; border-radius: 25px; padding: 8px 12px; backdrop-filter: blur(7px); }
     .mini-button:hover { background: #fff; }
     .petal { position: absolute; pointer-events: none; z-index: 2; border-radius: 80% 0 80% 0; background: linear-gradient(140deg,#dca0a6,#f6dad2); width: var(--s); height: calc(var(--s) * 1.5); left: var(--x); top: -60px; opacity: .65; transform: rotate(var(--r)); animation: fall var(--t) linear var(--d) infinite; }
@@ -191,11 +201,11 @@
       .intro h1 { font-size: clamp(51px, 12vw, 60px); }
       .stage { min-height: 670px; border-radius: 200px 200px 22px 22px; }
       .open-card { width: calc(100% - 31px); min-height: 444px; padding: 24px 19px; }
-      .card-message { max-height: 117px; margin-top: 10px; font-size: 13px; }
+      .card-message { max-height: none; margin-top: 13px; font-size: 13px; line-height: 1.8; }
       .card-divider { margin: 15px 0; }
       .card-heading { font-size: 22px; }
       .card-date { font-size: 45px; }
-      .card-controls { bottom: 105px; }
+      .stage.is-open .open-card { margin: 80px auto 56px; padding: 24px 18px; }
       .stage-bottom { bottom: 18px; font-size: 9px; }
       .stage-bottom::before, .stage-bottom::after { padding: 0 7px; }
       .footer { font-size: 9px; }
@@ -275,11 +285,11 @@
           <p class="card-message" id="messageText"></p>
           <div class="card-signature" id="senderText"></div>
           <div class="card-flower" aria-hidden="true">❀</div>
+          <div class="card-controls">
+            <button type="button" class="mini-button" id="copyBtn">⧉ &nbsp;Sao chép lời chúc</button>
+            <button type="button" class="mini-button" id="replayBtn">↶ &nbsp;Đóng thiệp</button>
+          </div>
         </article>
-        <div class="card-controls">
-          <button type="button" class="mini-button" id="copyBtn">⧉ &nbsp;Sao chép lời chúc</button>
-          <button type="button" class="mini-button" id="replayBtn">↶ &nbsp;Đóng thiệp</button>
-        </div>
         <div class="stage-bottom">Dành tặng những người phụ nữ tuyệt vời</div>
       </section>
     </main>
