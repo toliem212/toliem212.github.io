@@ -219,16 +219,16 @@
 
     <main class="layout" id="main">
       <section class="intro" aria-labelledby="page-title">
-        <div class="eyebrow">Dành tặng bạn</div>
+        <div class="eyebrow">Lời chúc nhân ngày 20/10</div>
         <h1 id="page-title">Một chút<br /><em>dịu dàng.</em></h1>
         <div class="date-line"><span>20.10.2026</span><span class="dot"></span><span>Ngày Phụ nữ Việt Nam</span></div>
-        <p class="lead">Có những điều đẹp đẽ bắt đầu từ một lời chúc nhỏ. Nhân ngày 20/10, gửi đến bạn một tấm thiệp chứa đầy sự trân trọng, niềm vui và yêu thương.</p>
+        <p class="lead">Có những điều đẹp đẽ bắt đầu từ một lời chúc nhỏ. Nhân ngày 20/10, xin gửi tặng một tấm thiệp cùng những lời chúc chân thành, niềm vui và sự trân trọng.</p>
         <div class="actions">
-          <button type="button" class="primary" id="mainBtn">Mở thiệp của bạn <span aria-hidden="true">↗</span></button>
+          <button type="button" class="primary" id="mainBtn">Mở tấm thiệp <span aria-hidden="true">↗</span></button>
           <button type="button" class="secondary" id="shareBtn">↗ &nbsp;Chia sẻ thiệp</button>
         </div>
         <p class="tiny-note" id="hintText">✧ Chạm vào phong bì để khám phá điều bất ngờ.</p>
-        <div class="intro-signature">Một chút yêu thương, gửi đến bạn</div>
+        <div class="intro-signature">Gửi những điều tốt đẹp</div>
       </section>
 
       <section class="stage" id="stage" aria-label="Thiệp chúc mừng tương tác">
@@ -260,9 +260,9 @@
 
         <div class="envelope-wrap" id="envelopeWrap">
           <button type="button" class="envelope-trigger" id="envelopeBtn" aria-label="Mở phong bì và đọc lời chúc">
-            <span class="envelope" aria-hidden="true"><span class="env-back"></span><span class="peek-letter">Dành tặng bạn ✿</span><span class="env-pocket"></span><span class="env-left"></span><span class="env-right"></span><span class="env-bottom"></span><span class="env-flap"></span><span class="seal">♥</span></span>
+            <span class="envelope" aria-hidden="true"><span class="env-back"></span><span class="peek-letter">Gửi lời chúc ✿</span><span class="env-pocket"></span><span class="env-left"></span><span class="env-right"></span><span class="env-bottom"></span><span class="env-flap"></span><span class="seal">♥</span></span>
           </button>
-          <div class="envelope-hint">Một lời nhắn đang chờ bạn... &nbsp; ♡</div>
+          <div class="envelope-hint">Một lời chúc đang chờ được mở... &nbsp; ♡</div>
         </div>
 
         <article class="open-card" id="letter" aria-live="polite" aria-label="Nội dung thiệp chúc mừng">
@@ -270,8 +270,8 @@
           <div class="card-date" aria-label="Ngày 20 tháng 10">20<span>·</span>10</div>
           <div class="card-sub">Chúc mừng ngày Phụ nữ Việt Nam</div>
           <div class="card-divider" aria-hidden="true"></div>
-          <p class="card-to">Gửi đến <strong id="recipientText">bạn</strong>,</p>
-          <h2 class="card-heading">Chúc bạn luôn<br />rạng rỡ và hạnh phúc!</h2>
+          <p class="card-to">Gửi đến <strong id="recipientText">những người phụ nữ tuyệt vời</strong>,</p>
+          <h2 class="card-heading">Chúc một ngày 20/10<br />rạng rỡ và hạnh phúc!</h2>
           <p class="card-message" id="messageText"></p>
           <div class="card-signature" id="senderText"></div>
           <div class="card-flower" aria-hidden="true">❀</div>
@@ -299,9 +299,9 @@
     (() => {
       'use strict';
       const DEFAULT = {
-        to: 'bạn',
-        message: 'Mong bạn luôn được yêu thương, trân trọng và tự tin tỏa sáng theo cách riêng của mình. Chúc mỗi ngày đều có những niềm vui nho nhỏ, những ước mơ được nâng niu và thật nhiều bình yên.',
-        from: 'Một người luôn quý mến bạn'
+        to: 'những người phụ nữ tuyệt vời',
+        message: 'Mong mỗi ngày đều ngập tràn niềm vui, bình an và những điều tốt đẹp. Chúc những ước mơ luôn được nâng niu, mọi nỗ lực được trân trọng và hạnh phúc luôn mỉm cười.',
+        from: 'Một lời chúc chân thành'
       };
       const $ = (selector) => document.querySelector(selector);
       const stage = $('#stage');
@@ -370,7 +370,7 @@
         stage.classList.add('is-open');
         $('#envelopeBtn').tabIndex = -1;
         mainBtn.innerHTML = 'Đóng thiệp <span aria-hidden="true">↶</span>';
-        $('#hintText').textContent = '✧ Chúc bạn một ngày 20/10 thật đẹp và ý nghĩa.';
+        $('#hintText').textContent = '✧ Chúc một ngày 20/10 thật đẹp và ý nghĩa.';
         if (fromUserGesture && !userMuted && !soundOn) void startSound();
         setTimeout(() => burst(), reducedMotion ? 0 : 450);
       }
@@ -378,7 +378,7 @@
         isOpen = false;
         stage.classList.remove('is-open');
         $('#envelopeBtn').tabIndex = 0;
-        mainBtn.innerHTML = 'Mở thiệp của bạn <span aria-hidden="true">↗</span>';
+        mainBtn.innerHTML = 'Mở tấm thiệp <span aria-hidden="true">↗</span>';
         $('#hintText').textContent = '✧ Chạm vào phong bì để khám phá điều bất ngờ.';
       }
       async function shareCard() {
