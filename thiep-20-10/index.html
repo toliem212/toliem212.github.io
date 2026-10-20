@@ -139,7 +139,7 @@
     .card-to strong { font-weight: 600; color: #844e5b; overflow-wrap: anywhere; }
     .card-heading { margin: 0; font: 400 27px/1.19 Georgia, serif; color: var(--wine); }
     .card-message { margin: 16px 0 18px; font: 14px/1.78 Georgia, "Times New Roman",serif; color: #785f5f; white-space: pre-line; overflow-wrap: anywhere; overflow-y: auto; max-height: 139px; scrollbar-color: #e0b7b0 transparent; }
-    .card-signature { margin-top: auto; font: italic 16px Georgia, serif; color: #a16974; overflow-wrap: anywhere; max-width: 100%; }
+    .card-signature { margin-top: auto; font: italic 16px/1.55 Georgia, serif; color: #a16974; overflow-wrap: anywhere; max-width: 100%; white-space: pre-line; }
     .card-flower { margin-top: 10px; font-size: 18px; color: #be8991; }
     .card-controls { position: absolute; z-index: 7; bottom: 61px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity .3s; }
     .stage.is-open .card-controls { opacity: 1; visibility: visible; transition: opacity .5s .8s; }
@@ -301,7 +301,7 @@
       const DEFAULT = {
         to: 'những người phụ nữ tuyệt vời',
         message: 'Mong mỗi ngày đều ngập tràn niềm vui, bình an và những điều tốt đẹp. Chúc những ước mơ luôn được nâng niu, mọi nỗ lực được trân trọng và hạnh phúc luôn mỉm cười.',
-        from: 'Một lời chúc chân thành'
+        from: 'Thân mến,\nTô Thanh Liêm'
       };
       const $ = (selector) => document.querySelector(selector);
       const stage = $('#stage');
@@ -324,7 +324,7 @@
       function render() {
         $('#recipientText').textContent = values.to || DEFAULT.to;
         $('#messageText').textContent = values.message || DEFAULT.message;
-        $('#senderText').textContent = '— ' + (values.from || DEFAULT.from);
+        $('#senderText').textContent = values.from || DEFAULT.from;
       }
       function toast(message) {
         const node = $('#toast');
@@ -406,7 +406,7 @@
         }
       }
       async function copyGreeting() {
-        const text = `Chúc mừng ngày Phụ nữ Việt Nam 20/10!\n\nGửi ${values.to || DEFAULT.to},\n\n${values.message || DEFAULT.message}\n\n— ${values.from || DEFAULT.from}`;
+        const text = `Chúc mừng ngày Phụ nữ Việt Nam 20/10!\n\nGửi ${values.to || DEFAULT.to},\n\n${values.message || DEFAULT.message}\n\n${values.from || DEFAULT.from}`;
         try {
           if (navigator.clipboard && window.isSecureContext) {
             await navigator.clipboard.writeText(text);
