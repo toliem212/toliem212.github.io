@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fbf5ee" />
+  <meta name="description" content="Một tấm thiệp nhỏ gửi những lời chúc yêu thương nhân ngày Phụ nữ Việt Nam 20/10." />
+  <title>Chúc mừng ngày Phụ nữ Việt Nam 20/10 | Một chút dịu dàng</title>
+  <link rel="canonical" href="https://toliem212.github.io/thiep-20-10/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="Thiệp chúc mừng 20/10" />
+  <meta property="og:title" content="Một chút dịu dàng dành tặng bạn | Chúc mừng 20/10" />
+  <meta property="og:description" content="Một lời chúc nhỏ, cùng thật nhiều yêu thương. Mở phong bì để nhận món quà ngày Phụ nữ Việt Nam 20/10." />
+  <meta property="og:url" content="https://toliem212.github.io/thiep-20-10/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --cream: #fbf5ee;
+      --paper: #fffdf9;
+      --rose: #c46d7c;
+      --rose-light: #f5d9d9;
+      --wine: #693441;
+      --ink: #503b3d;
+      --muted: #8c7472;
+      --gold: #c5a06c;
+      --border: rgba(116, 67, 71, .15);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(ellipse 50% 48% at 88% 12%, #f7dbdd 0%, transparent 100%),
+        radial-gradient(ellipse 35% 45% at 7% 91%, #f5e2d6 0%, transparent 100%),
+        var(--cream);
+      overflow-x: hidden;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+      opacity: .12;
+      background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity=".17"/%3E%3C/svg%3E');
+    }
+    button, input, textarea { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid #d99aa6;
+      outline-offset: 4px;
+    }
+    .page { max-width: 1260px; margin: auto; padding: 27px 45px 30px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: inline-flex; gap: 12px; align-items: center; color: var(--wine); text-decoration: none; }
+    .brand-flower { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #d5a3a6; border-radius: 50%; font-size: 22px; }
+    .brand-name { display: block; font: 600 13px/1.35 Georgia, serif; letter-spacing: .07em; }
+    .brand-caption { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
+    .sound {
+      border: 1px solid var(--border); background: rgba(255,255,255,.49); color: var(--wine);
+      border-radius: 100px; padding: 10px 15px; font-size: 12px; display: inline-flex; align-items: center; gap: 9px;
+      transition: background .2s, transform .2s;
+    }
+    .sound:hover { background: #fff; transform: translateY(-2px); }
+    .sound-icon { font-size: 16px; }
+    .layout { display: grid; grid-template-columns: minmax(350px, .93fr) minmax(0, 1.07fr); gap: clamp(25px, 4vw, 70px); align-items: center; min-height: min(790px, calc(100vh - 115px)); }
+    .intro { position: relative; padding: 50px 0 20px 21px; z-index: 2; }
+    .intro::before { content: ""; position: absolute; left: 0; top: 40px; height: 93px; width: 1px; background: var(--gold); }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: #a06f66; font-size: 12px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; }
+    .eyebrow::after { content: ""; width: 44px; height: 1px; background: #cda88c; }
+    .intro h1 { font: 400 clamp(57px, 6.4vw, 94px)/1.09 Georgia, "Times New Roman", serif; letter-spacing: -.05em; color: var(--wine); margin: 29px 0 15px; }
+    .intro h1 em { display: inline-block; color: var(--rose); font-weight: 400; letter-spacing: -.062em; }
+    .date-line { display: flex; align-items: center; gap: 13px; font-size: 13px; color: #a26d71; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 25px; }
+    .date-line .dot { width: 6px; height: 6px; border-radius: 50%; background: #d7a3a2; }
+    .lead { max-width: 390px; color: #816a66; font-size: 16px; line-height: 1.85; margin: 0 0 32px; }
+    .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .primary, .secondary { min-height: 49px; border-radius: 100px; padding: 13px 22px; border: 1px solid transparent; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 12px; transition: transform .23s, box-shadow .23s, background .23s; }
+    .primary { background: var(--wine); color: #fffaf6; box-shadow: 0 10px 24px rgba(105, 52, 65, .16); }
+    .primary:hover { transform: translateY(-3px); background: #7e4652; box-shadow: 0 14px 28px rgba(105, 52, 65, .22); }
+    .secondary { border-color: #d9beb6; background: rgba(255,255,255,.27); color: var(--wine); }
+    .secondary:hover { transform: translateY(-3px); background: #fffaf7; }
+    .tiny-note { font-size: 12px; color: #a18b83; margin-top: 23px; }
+    .intro-signature { display: flex; align-items: center; gap: 15px; color: #af8a79; letter-spacing: .14em; font-size: 10px; text-transform: uppercase; margin-top: 62px; }
+    .intro-signature::before { content: ""; background: #c4aa96; width: 33px; height: 1px; }
+    .stage {
+      position: relative; isolation: isolate; min-height: 615px; max-width: 615px; width: 100%; display: grid; place-items: center;
+      background: linear-gradient(145deg, rgba(255,251,248,.87), rgba(249,225,221,.76));
+      border: 1px solid rgba(255,255,255,.91); border-radius: 260px 260px 26px 26px;
+      box-shadow: 0 25px 85px rgba(152,93,87,.07), inset 0 0 0 8px rgba(255,255,255,.28);
+      overflow: hidden;
+    }
+    .stage::before { content: ""; position: absolute; width: 430px; height: 430px; border: 1px solid rgba(191,141,124,.27); border-radius: 50%; top: 79px; left: 50%; transform: translateX(-50%); }
+    .stage::after { content: ""; position: absolute; width: 485px; height: 485px; border: 1px solid rgba(191,141,124,.11); border-radius: 50%; top: 51px; left: 50%; transform: translateX(-50%); }
+    .stage-caption { position: absolute; top: 32px; left: 50%; transform: translateX(-50%); z-index: 7; white-space: nowrap; font: 11px/1.3 Georgia, serif; color: #a8807b; letter-spacing: .18em; text-transform: uppercase; }
+    .stage-bottom { position: absolute; bottom: 26px; left: 0; right: 0; z-index: 7; text-align: center; font-size: 11px; letter-spacing: .15em; color: #a98278; text-transform: uppercase; }
+    .stage-bottom::before, .stage-bottom::after { content: "✦"; padding: 0 16px; color: var(--gold); }
+    .botanical { pointer-events: none; position: absolute; z-index: 1; width: 305px; height: 380px; top: 57px; right: -62px; opacity: .84; transform: rotate(9deg); animation: sway 7s ease-in-out infinite; transform-origin: 80% 96%; }
+    .botanical-left { width: 205px; height: 245px; top: 295px; left: -52px; right: auto; transform: rotate(-23deg); animation: swayLeft 8s ease-in-out infinite; opacity: .55; }
+    .envelope-wrap { position: relative; z-index: 4; width: min(395px, 84%); margin-top: 90px; transition: opacity .35s, transform .7s var(--ease), visibility 0s .7s; filter: drop-shadow(0 24px 24px rgba(128,68,72,.18)); }
+    .envelope-trigger { display: block; position: relative; width: 100%; aspect-ratio: 1.46; border: 0; padding: 0; background: transparent; text-align: center; filter: none; }
+    .envelope-trigger:hover .envelope { transform: translateY(-7px); }
+    .envelope { position: absolute; inset: 0; transform: translateY(0); transition: transform .3s var(--ease); }
+    .env-back { position: absolute; inset: 0; background: #df9da2; border-radius: 7px; }
+    .peek-letter { position: absolute; left: 8%; width: 84%; height: 94%; bottom: 10%; border-radius: 5px; background: #fffcf6; display: grid; justify-items: center; align-content: start; padding-top: 33px; color: #b1787c; font: 21px Georgia, serif; box-shadow: 0 1px 15px rgba(91,47,47,.13); transition: transform .75s var(--ease); }
+    .peek-letter::after { content: ""; width: 47px; height: 1px; background: #dfb3a3; margin-top: 15px; }
+    .env-pocket { position: absolute; inset: 0; background: linear-gradient(140deg, #f4c4c1 4%, #e8afb0 75%); clip-path: polygon(0% 0%,50% 55%,100% 0%,100% 100%,0% 100%); border-radius: 7px; }
+    .env-left { position: absolute; inset: 0; background: #efb9b7; clip-path: polygon(0 0, 53% 58%, 0 100%); }
+    .env-right { position: absolute; inset: 0; background: #ecb3b4; clip-path: polygon(100% 0, 47% 58%, 100% 100%); }
+    .env-bottom { position: absolute; inset: 0; background: linear-gradient(160deg, #f6cfca, #e6a5a9); clip-path: polygon(0 100%, 50% 44%, 100% 100%); border-radius: 0 0 7px 7px; }
+    .env-flap { position: absolute; inset: -1px 0 0; background: linear-gradient(170deg, #f8d3ce, #e4a4a9); clip-path: polygon(0 0,100% 0,50% 59%); border-radius: 7px; transform-origin: 50% 0; transition: transform .8s var(--ease); }
+    .seal { position: absolute; top: 48%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; height: 60px; width: 60px; background: radial-gradient(circle at 30% 20%,#b06e7d,#8b4c5d); border: 3px solid #f2c9bf; box-shadow: 0 4px 9px rgba(90,41,47,.14), inset 0 0 0 1px rgba(255,231,211,.45); display: grid; place-items: center; color: #ffe6d5; font: 31px Georgia,serif; transition: opacity .15s; }
+    .envelope-hint { text-align: center; color: #8d6569; margin-top: 22px; font-size: 13px; letter-spacing: .045em; animation: breathe 2.6s ease-in-out infinite; }
+    .open-card {
+      z-index: 5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -41%) scale(.85) rotate(-3deg);
+      width: min(425px, calc(100% - 54px)); min-height: 490px; padding: 36px 35px 29px;
+      background: #fffdf9; border-radius: 4px;
+      box-shadow: 0 16px 42px rgba(108,58,64,.18), 0 0 0 1px #ead9cf, inset 0 0 0 10px #fffdf9, inset 0 0 0 11px #e5cbc1;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity .55s .3s, transform .9s .2s var(--ease), visibility 0s .9s;
+      text-align: center; display: flex; flex-direction: column; align-items: center;
+    }
+    .stage.is-open .envelope-wrap { opacity: 0; visibility: hidden; transform: translateY(70px) scale(.8); transition: opacity .32s .27s, transform .7s var(--ease), visibility 0s .7s; }
+    .stage.is-open .env-flap { transform: rotateX(180deg); }
+    .stage.is-open .peek-letter { transform: translateY(-135px); }
+    .stage.is-open .open-card { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, -47%) scale(1) rotate(0); transition: opacity .65s .45s, transform 1s .3s var(--ease), visibility 0s .3s; }
+    .card-ornament { display: flex; align-items: center; gap: 11px; color: #bd8d78; font-size: 17px; margin: 7px 0 12px; }
+    .card-ornament::before, .card-ornament::after { content: ""; height: 1px; width: 37px; background: #e1c8b9; }
+    .card-date { font: 400 54px/.99 Georgia, "Times New Roman", serif; color: #9d6470; letter-spacing: -.045em; }
+    .card-date span { color: #d6af9e; padding: 0 5px; font-size: 35px; }
+    .card-sub { margin-top: 5px; color: #b08a7b; text-transform: uppercase; letter-spacing: .23em; font-size: 9px; }
+    .card-divider { width: 70px; height: 1px; background: #ddc7b7; margin: 22px 0 19px; }
+    .card-to { margin: 0 0 9px; color: #ab7e79; font-size: 12px; letter-spacing: .04em; }
+    .card-to strong { font-weight: 600; color: #844e5b; overflow-wrap: anywhere; }
+    .card-heading { margin: 0; font: 400 27px/1.19 Georgia, serif; color: var(--wine); }
+    .card-message { margin: 16px 0 18px; font: 14px/1.78 Georgia, "Times New Roman",serif; color: #785f5f; white-space: pre-line; overflow-wrap: anywhere; overflow-y: auto; max-height: 139px; scrollbar-color: #e0b7b0 transparent; }
+    .card-signature { margin-top: auto; font: italic 16px Georgia, serif; color: #a16974; overflow-wrap: anywhere; max-width: 100%; }
+    .card-flower { margin-top: 10px; font-size: 18px; color: #be8991; }
+    .card-controls { position: absolute; z-index: 7; bottom: 61px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity .3s; }
+    .stage.is-open .card-controls { opacity: 1; visibility: visible; transition: opacity .5s .8s; }
+    .mini-button { border: 1px solid rgba(151,92,94,.23); background: rgba(255,251,248,.88); color: #81545b; font-size: 11px; border-radius: 25px; padding: 8px 12px; backdrop-filter: blur(7px); }
+    .mini-button:hover { background: #fff; }
+    .petal { position: absolute; pointer-events: none; z-index: 2; border-radius: 80% 0 80% 0; background: linear-gradient(140deg,#dca0a6,#f6dad2); width: var(--s); height: calc(var(--s) * 1.5); left: var(--x); top: -60px; opacity: .65; transform: rotate(var(--r)); animation: fall var(--t) linear var(--d) infinite; }
+    .burst { position: absolute; top: 47%; left: 50%; z-index: 9; width: 9px; height: 13px; border-radius: 80% 0 80% 0; background: var(--c); pointer-events: none; animation: scatter 1.35s var(--ease) forwards; }
+    .footer { display: flex; gap: 20px; justify-content: space-between; border-top: 1px solid #e8d6cb; padding-top: 18px; font-size: 11px; color: #a0897e; letter-spacing: .025em; }
+    .footer span:last-child { color: #ad8587; }
+    .toast { position: fixed; z-index: 20; bottom: 28px; left: 50%; transform: translate(-50%, 35px); opacity: 0; pointer-events: none; border-radius: 50px; padding: 11px 19px; background: #693441; color: white; font-size: 13px; box-shadow: 0 12px 35px #66374438; transition: transform .32s, opacity .32s; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    @keyframes fall { from { transform: translate3d(0,-20px,0) rotate(var(--r)); } to { transform: translate3d(var(--drift),710px,0) rotate(650deg); } }
+    @keyframes sway { 0%,100% { transform: rotate(9deg); } 50% { transform: rotate(15deg); } }
+    @keyframes swayLeft { 0%,100% { transform: rotate(-23deg); } 50% { transform: rotate(-15deg); } }
+    @keyframes breathe { 0%,100% { opacity: .57; } 50% { opacity: 1; } }
+    @keyframes scatter { 0% { opacity: 1; transform: translate(0,0) rotate(0); } 100% { opacity: 0; transform: translate(var(--dx),var(--dy)) rotate(var(--deg)); } }
+    @media (max-width: 900px) {
+      .page { padding: 22px 26px 26px; }
+      .layout { grid-template-columns: .88fr 1.12fr; gap: 20px; }
+      .intro { padding-left: 7px; }
+      .intro::before { left: -12px; }
+      .intro h1 { font-size: clamp(52px, 7vw, 72px); }
+      .stage { min-height: 565px; }
+      .open-card { min-height: 465px; padding: 29px 23px; }
+      .card-date { font-size: 48px; }
+      .card-heading { font-size: 24px; }
+    }
+    @media (max-width: 690px) {
+      .page { padding: 18px 18px 22px; }
+      .layout { display: flex; flex-direction: column; align-items: stretch; min-height: 0; gap: 34px; }
+      .intro { padding: 45px 7px 0 17px; }
+      .intro::before { top: 43px; height: 67px; }
+      .intro h1 { font-size: clamp(58px, 12vw, 77px); margin: 20px 0 12px; }
+      .lead { max-width: 550px; font-size: 14px; line-height: 1.72; margin-bottom: 22px; }
+      .date-line { font-size: 11px; margin-bottom: 18px; }
+      .intro-signature { display: none; }
+      .tiny-note { margin-top: 15px; }
+      .stage { min-height: 680px; align-self: center; width: 100%; max-width: 570px; }
+      .footer { margin-top: 22px; }
+    }
+    @media (max-width: 420px) {
+      .brand-flower { height: 36px; width: 36px; }
+      .brand-name { font-size: 12px; }
+      .brand-caption { font-size: 9px; letter-spacing: .09em; }
+      .sound { padding: 9px 10px; }
+      .sound .sound-label { display: none; }
+      .intro h1 { font-size: clamp(51px, 12vw, 60px); }
+      .stage { min-height: 670px; border-radius: 200px 200px 22px 22px; }
+      .open-card { width: calc(100% - 31px); min-height: 444px; padding: 24px 19px; }
+      .card-message { max-height: 117px; margin-top: 10px; font-size: 13px; }
+      .card-divider { margin: 15px 0; }
+      .card-heading { font-size: 22px; }
+      .card-date { font-size: 45px; }
+      .card-controls { bottom: 105px; }
+      .stage-bottom { bottom: 18px; font-size: 9px; }
+      .stage-bottom::before, .stage-bottom::after { padding: 0 7px; }
+      .footer { font-size: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="Về đầu trang">
+        <span class="brand-flower" aria-hidden="true">✿</span>
+        <span><span class="brand-name">Một lời gửi thương</span><span class="brand-caption">Thiệp chúc mừng · 20.10</span></span>
+      </a>
+      <button type="button" class="sound" id="soundBtn" aria-pressed="false" aria-label="Bật nhạc nền">
+        <span class="sound-icon" id="soundIcon" aria-hidden="true">♫</span><span class="sound-label" id="soundLabel">Bật giai điệu</span>
+      </button>
+    </header>
+
+    <main class="layout" id="main">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow">Dành tặng bạn</div>
+        <h1 id="page-title">Một chút<br /><em>dịu dàng.</em></h1>
+        <div class="date-line"><span>20.10.2026</span><span class="dot"></span><span>Ngày Phụ nữ Việt Nam</span></div>
+        <p class="lead">Có những điều đẹp đẽ bắt đầu từ một lời chúc nhỏ. Nhân ngày 20/10, gửi đến bạn một tấm thiệp chứa đầy sự trân trọng, niềm vui và yêu thương.</p>
+        <div class="actions">
+          <button type="button" class="primary" id="mainBtn">Mở thiệp của bạn <span aria-hidden="true">↗</span></button>
+          <button type="button" class="secondary" id="shareBtn">↗ &nbsp;Chia sẻ thiệp</button>
+        </div>
+        <p class="tiny-note" id="hintText">✧ Chạm vào phong bì để khám phá điều bất ngờ.</p>
+        <div class="intro-signature">Một chút yêu thương, gửi đến bạn</div>
+      </section>
+
+      <section class="stage" id="stage" aria-label="Thiệp chúc mừng tương tác">
+        <div class="stage-caption">Lời chúc ngày 20 tháng 10</div>
+        <svg class="botanical" viewBox="0 0 260 360" fill="none" aria-hidden="true">
+          <g stroke="#789078" stroke-width="2.3" stroke-linecap="round">
+            <path d="M188 343 C157 278 170 193 108 74"/><path d="M184 334 C207 261 205 170 220 82"/><path d="M173 285 C125 267 97 248 47 210"/>
+            <path d="M172 287 C142 264 135 221 114 194"/><path d="M184 300 C198 267 230 255 247 221"/>
+          </g>
+          <g fill="#9db1a0" opacity=".8">
+            <ellipse cx="163" cy="254" rx="11" ry="30" transform="rotate(-39 163 254)"/><ellipse cx="184" cy="221" rx="11" ry="27" transform="rotate(26 184 221)"/>
+            <ellipse cx="118" cy="235" rx="9" ry="25" transform="rotate(-63 118 235)"/><ellipse cx="94" cy="211" rx="9" ry="24" transform="rotate(-80 94 211)"/>
+            <ellipse cx="210" cy="178" rx="9" ry="26" transform="rotate(28 210 178)"/><ellipse cx="196" cy="147" rx="9" ry="26" transform="rotate(-42 196 147)"/>
+            <ellipse cx="134" cy="156" rx="9" ry="24" transform="rotate(-29 134 156)"/><ellipse cx="128" cy="119" rx="9" ry="24" transform="rotate(38 128 119)"/>
+          </g>
+          <g transform="translate(105 73)">
+            <ellipse ry="39" rx="24" fill="#e7a7aa"/><ellipse ry="39" rx="24" transform="rotate(72)" fill="#edb5b2"/><ellipse ry="39" rx="24" transform="rotate(144)" fill="#f1c4bd"/><ellipse ry="39" rx="24" transform="rotate(216)" fill="#e7a7aa"/><ellipse ry="39" rx="24" transform="rotate(288)" fill="#eab0ae"/><circle r="20" fill="#d9a666"/><circle r="13" fill="#eac891"/><g fill="#b68a5c"><circle cx="-5" cy="-4" r="2"/><circle cx="6" cy="5" r="2"/><circle cx="7" cy="-7" r="2"/><circle cx="-7" cy="8" r="2"/></g>
+          </g>
+          <g transform="translate(221 78) scale(.75)"><ellipse ry="41" rx="22" fill="#df959f"/><ellipse ry="41" rx="22" transform="rotate(60)" fill="#e9afb3"/><ellipse ry="41" rx="22" transform="rotate(120)" fill="#f2c5be"/><circle r="18" fill="#e9c48e"/></g>
+          <g transform="translate(51 208) scale(.55)"><ellipse ry="38" rx="22" fill="#f1c4bd"/><ellipse ry="38" rx="22" transform="rotate(70)" fill="#e3a1a8"/><ellipse ry="38" rx="22" transform="rotate(140)" fill="#eab5b4"/><ellipse ry="38" rx="22" transform="rotate(210)" fill="#f1c4bd"/><ellipse ry="38" rx="22" transform="rotate(280)" fill="#e3a1a8"/><circle r="17" fill="#dfb983"/></g>
+          <g fill="#cb8e95" opacity=".8"><circle cx="151" cy="203" r="4"/><circle cx="146" cy="192" r="4"/><circle cx="155" cy="183" r="4"/><circle cx="228" cy="199" r="4"/><circle cx="238" cy="192" r="4"/></g>
+        </svg>
+        <svg class="botanical botanical-left" viewBox="0 0 260 360" fill="none" aria-hidden="true">
+          <g stroke="#7b987f" stroke-width="3"><path d="M170 348 C172 266 140 188 75 66"/><path d="M167 315 C200 255 208 170 219 118"/></g>
+          <g fill="#a2b4a0"><ellipse cx="143" cy="236" rx="15" ry="39" transform="rotate(-52 143 236)"/><ellipse cx="187" cy="218" rx="15" ry="39" transform="rotate(40 187 218)"/><ellipse cx="111" cy="175" rx="13" ry="32" transform="rotate(-50 111 175)"/><ellipse cx="195" cy="162" rx="11" ry="33" transform="rotate(46 195 162)"/></g>
+          <g transform="translate(76 66)"><ellipse ry="47" rx="29" fill="#e5a2a9"/><ellipse ry="47" rx="29" transform="rotate(72)" fill="#edb5b6"/><ellipse ry="47" rx="29" transform="rotate(144)" fill="#f1bfb7"/><ellipse ry="47" rx="29" transform="rotate(216)" fill="#e3a1ab"/><ellipse ry="47" rx="29" transform="rotate(288)" fill="#f1beb9"/><circle r="23" fill="#e7ba7c"/></g>
+          <g transform="translate(220 114) scale(.55)"><ellipse ry="47" rx="29" fill="#f3c0bb"/><ellipse ry="47" rx="29" transform="rotate(60)" fill="#e3a3ab"/><ellipse ry="47" rx="29" transform="rotate(120)" fill="#f3c0bb"/><circle r="20" fill="#e7ba7c"/></g>
+        </svg>
+
+        <div class="envelope-wrap" id="envelopeWrap">
+          <button type="button" class="envelope-trigger" id="envelopeBtn" aria-label="Mở phong bì và đọc lời chúc">
+            <span class="envelope" aria-hidden="true"><span class="env-back"></span><span class="peek-letter">Dành tặng bạn ✿</span><span class="env-pocket"></span><span class="env-left"></span><span class="env-right"></span><span class="env-bottom"></span><span class="env-flap"></span><span class="seal">♥</span></span>
+          </button>
+          <div class="envelope-hint">Một lời nhắn đang chờ bạn... &nbsp; ♡</div>
+        </div>
+
+        <article class="open-card" id="letter" aria-live="polite" aria-label="Nội dung thiệp chúc mừng">
+          <div class="card-ornament" aria-hidden="true">✿</div>
+          <div class="card-date" aria-label="Ngày 20 tháng 10">20<span>·</span>10</div>
+          <div class="card-sub">Chúc mừng ngày Phụ nữ Việt Nam</div>
+          <div class="card-divider" aria-hidden="true"></div>
+          <p class="card-to">Gửi đến <strong id="recipientText">bạn</strong>,</p>
+          <h2 class="card-heading">Chúc bạn luôn<br />rạng rỡ và hạnh phúc!</h2>
+          <p class="card-message" id="messageText"></p>
+          <div class="card-signature" id="senderText"></div>
+          <div class="card-flower" aria-hidden="true">❀</div>
+        </article>
+        <div class="card-controls">
+          <button type="button" class="mini-button" id="copyBtn">⧉ &nbsp;Sao chép lời chúc</button>
+          <button type="button" class="mini-button" id="replayBtn">↶ &nbsp;Đóng thiệp</button>
+        </div>
+        <div class="stage-bottom">Dành tặng những người phụ nữ tuyệt vời</div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>20.10.2026 · Gửi đi những điều đẹp đẽ</span><span>Gửi bằng cả tấm lòng ♡</span></footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      'use strict';
+      const DEFAULT = {
+        to: 'bạn',
+        message: 'Mong bạn luôn được yêu thương, trân trọng và tự tin tỏa sáng theo cách riêng của mình. Chúc mỗi ngày đều có những niềm vui nho nhỏ, những ước mơ được nâng niu và thật nhiều bình yên.',
+        from: 'Một người luôn quý mến bạn'
+      };
+      const $ = (selector) => document.querySelector(selector);
+      const stage = $('#stage');
+      const mainBtn = $('#mainBtn');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let isOpen = false;
+      let toastTimer;
+      let audioCtx = null, melodyTimer = null, noteIndex = 0, soundOn = false;
+      const params = new URLSearchParams(window.location.search);
+      const values = {
+        to: (params.get('to') || DEFAULT.to).slice(0, 45),
+        message: (params.get('message') || DEFAULT.message).slice(0, 230),
+        from: (params.get('from') || DEFAULT.from).slice(0, 55)
+      };
+
+      function render() {
+        $('#recipientText').textContent = values.to || DEFAULT.to;
+        $('#messageText').textContent = values.message || DEFAULT.message;
+        $('#senderText').textContent = '— ' + (values.from || DEFAULT.from);
+      }
+      function toast(message) {
+        const node = $('#toast');
+        node.textContent = message;
+        node.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => node.classList.remove('show'), 2700);
+      }
+      function petals() {
+        const colors = ['#e8a7b0','#dba2a9','#f5ccbf','#cf9a7a','#efb6ae'];
+        for (let i = 0; i < 13; i++) {
+          const node = document.createElement('span');
+          node.className = 'petal';
+          node.style.setProperty('--x', (5 + Math.random() * 90) + '%');
+          node.style.setProperty('--s', (7 + Math.random() * 8) + 'px');
+          node.style.setProperty('--r', (Math.random() * 180) + 'deg');
+          node.style.setProperty('--t', (7 + Math.random() * 8) + 's');
+          node.style.setProperty('--d', (-Math.random() * 13) + 's');
+          node.style.setProperty('--drift', (-95 + Math.random() * 190) + 'px');
+          node.style.background = colors[i % colors.length];
+          stage.appendChild(node);
+        }
+      }
+      function burst() {
+        if (reducedMotion) return;
+        const colors = ['#cf8392','#e7a6a8','#e8c295','#f0c7c1','#b48a78'];
+        for (let i = 0; i < 25; i++) {
+          const node = document.createElement('span');
+          node.className = 'burst';
+          const angle = 2 * Math.PI * i / 25;
+          const distance = 95 + Math.random() * 205;
+          node.style.setProperty('--dx', (Math.cos(angle) * distance) + 'px');
+          node.style.setProperty('--dy', (Math.sin(angle) * distance - 45) + 'px');
+          node.style.setProperty('--deg', (Math.random() * 650) + 'deg');
+          node.style.setProperty('--c', colors[i % colors.length]);
+          stage.appendChild(node);
+          node.addEventListener('animationend', () => node.remove(), { once: true });
+        }
+      }
+      function openCard() {
+        if (isOpen) return;
+        isOpen = true;
+        stage.classList.add('is-open');
+        $('#envelopeBtn').tabIndex = -1;
+        mainBtn.innerHTML = 'Đóng thiệp <span aria-hidden="true">↶</span>';
+        $('#hintText').textContent = '✧ Chúc bạn một ngày 20/10 thật đẹp và ý nghĩa.';
+        setTimeout(() => { burst(); if (soundOn) chime(); }, reducedMotion ? 0 : 450);
+      }
+      function closeCard() {
+        isOpen = false;
+        stage.classList.remove('is-open');
+        $('#envelopeBtn').tabIndex = 0;
+        mainBtn.innerHTML = 'Mở thiệp của bạn <span aria-hidden="true">↗</span>';
+        $('#hintText').textContent = '✧ Chạm vào phong bì để khám phá điều bất ngờ.';
+      }
+      async function shareCard() {
+        const url = window.location.href;
+        try {
+          if (navigator.share) {
+            await navigator.share({ title: document.title, text: 'Một lời chúc nhỏ nhân ngày 20/10 🌷', url });
+            return;
+          }
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            const temp = document.createElement('textarea');
+            temp.value = url;
+            temp.style.position = 'fixed';
+            temp.style.opacity = '0';
+            document.body.appendChild(temp);
+            temp.select();
+            if (!document.execCommand('copy')) throw new Error('Không thể sao chép');
+            temp.remove();
+          }
+          toast('Đã sao chép liên kết thiệp ♡');
+        } catch (error) {
+          if (error.name !== 'AbortError') toast('Bạn có thể sao chép liên kết trên thanh địa chỉ.');
+        }
+      }
+      async function copyGreeting() {
+        const text = `Chúc mừng ngày Phụ nữ Việt Nam 20/10!\n\nGửi ${values.to || DEFAULT.to},\n\n${values.message || DEFAULT.message}\n\n— ${values.from || DEFAULT.from}`;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const tmp = document.createElement('textarea');
+            tmp.value = text;
+            tmp.style.position = 'fixed';
+            tmp.style.opacity = '0';
+            document.body.appendChild(tmp);
+            tmp.select();
+            if (!document.execCommand('copy')) throw new Error('Copy blocked');
+            tmp.remove();
+          }
+          toast('Đã sao chép lời chúc! ♡');
+        } catch (e) { toast('Trình duyệt chưa cho phép sao chép.'); }
+      }
+      function playNote(frequency, when, duration = .5, gain = .022) {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const volume = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(frequency, when);
+        volume.gain.setValueAtTime(.0001, when);
+        volume.gain.exponentialRampToValueAtTime(gain, when + .025);
+        volume.gain.exponentialRampToValueAtTime(.0001, when + duration);
+        osc.connect(volume); volume.connect(audioCtx.destination);
+        osc.start(when); osc.stop(when + duration + .04);
+      }
+      function chime() {
+        if (!audioCtx) return;
+        const t = audioCtx.currentTime;
+        [523.25, 659.25, 783.99, 1046.5].forEach((hz, i) => playNote(hz, t + i * .12, .85, .03));
+      }
+      function tickMelody() {
+        if (!audioCtx || !soundOn) return;
+        const tune = [523.25,659.25,783.99,659.25,587.33,523.25,440,0,493.88,587.33,659.25,783.99,659.25,587.33,523.25,0];
+        const freq = tune[noteIndex % tune.length];
+        if (freq) playNote(freq, audioCtx.currentTime, .42, .013);
+        noteIndex++;
+      }
+      async function toggleSound() {
+        try {
+          if (!soundOn) {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            await audioCtx.resume();
+            soundOn = true; tickMelody(); melodyTimer = setInterval(tickMelody, 530);
+          } else {
+            soundOn = false; clearInterval(melodyTimer); melodyTimer = null;
+          }
+          $('#soundBtn').setAttribute('aria-pressed', String(soundOn));
+          $('#soundBtn').setAttribute('aria-label', soundOn ? 'Tắt nhạc nền' : 'Bật nhạc nền');
+          $('#soundIcon').textContent = soundOn ? '♪' : '♫';
+          $('#soundLabel').textContent = soundOn ? 'Tắt giai điệu' : 'Bật giai điệu';
+        } catch (e) { toast('Trình duyệt không hỗ trợ phát giai điệu.'); }
+      }
+      $('#mainBtn').addEventListener('click', () => isOpen ? closeCard() : openCard());
+      $('#envelopeBtn').addEventListener('click', openCard);
+      $('#replayBtn').addEventListener('click', closeCard);
+      $('#shareBtn').addEventListener('click', shareCard);
+      $('#copyBtn').addEventListener('click', copyGreeting);
+      $('#soundBtn').addEventListener('click', toggleSound);
+      document.addEventListener('visibilitychange', () => {
+        if (!audioCtx || !soundOn) return;
+        if (document.hidden) audioCtx.suspend();
+        else audioCtx.resume().catch(() => {});
+      });
+      render();
+      if (!reducedMotion) petals();
+      if (params.has('to') || params.has('message') || params.has('from')) openCard();
+    })();
+  </script>
+</body>
+</html>
